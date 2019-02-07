@@ -1,0 +1,22 @@
+Root пароль от MySQL: 
+
+
+
+
+wget http://aviras.ru/install.sh
+
+sh install.sh
+
+Выполняем crontab -e
+
+Админка:
+admin@serverpanel.ru
+
+Пароль: fef558K8FOSRlYx3TlAM
+
+
+
+
+
+
+
