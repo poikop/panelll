@@ -1,0 +1,44 @@
+﻿smsServices:
+# ----------------
+# TEST "SERVICE"
+# - url: 'https://httpbin.org/post'
+#   method: 'POST'
+#   headers:
+#     Content-Type: 'application/json'
+#   body: '{"phone_number":"<num>"}'
+#   okRes: 'origin'
+#   delay: 5
+# ----------------
+
+
+
+- url: 'https://belkacar.ru/get-confirmation-code' 
+  method: 'POST'
+  body: 'phone=<num>'
+  okRes: 'success":true'
+  delay: 61
+  
+- url: 'https://p.grabtaxi.com/api/passenger/v2/profiles/register' 
+  method: 'POST'
+  body: 'phoneNumber=<num>&countryCode=ID&name=Alexey&email=alexey173949%40gmail.com&deviceToken=*'
+  okRes: 'phoneNumber'
+  delay: 2
+  
+- url: 'https://api.tinkoff.ru/v1/sign_up' 
+  method: 'POST'
+  body: 'phone=%2B<num>'
+  okRes: '"resultCode":"WAITING_CONFIRMATION"'
+  delay: 21
+  
+- url: 'https://youla.ru/web-api/auth/request_code' 
+  method: 'POST'
+  body: 'phone=<num>'
+  okRes: '"phone"'
+  delay: 16
+- url: 'https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"phone_number":"<num>"}'
+  okRes: 'sms_sent":true'
+  delay: 21
